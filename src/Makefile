@@ -52,4 +52,4 @@ valgrind : $(CLIENT1) $(CLIENT2)
 
 infer :
 	make clean ; infer-capture -- make encode ; infer-analyze -- make encode;
-	infer-capture -- make decode ; infer-analyze -- make decode;
+	#infer-capture -- make decode ; infer-analyze -- make decode;

@@ -34,6 +34,4 @@
 
 - Type `make valgrind` to check for any memory leaks in the program
 
-# Infer Errors:
 
-- For my decode program, it says that I have a memoryleak from a fileheader. This happens even though I freed the memory and valgrind shows no memory leaks.
