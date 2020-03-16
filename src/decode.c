@@ -123,7 +123,7 @@ int main(int argc, char **argv) {
     printf("Compressed file size: %lu bytes\n", concluding_filesize + 1);
     printf("Uncompressed file size: %lu bytes\n", original_filesize);
     if (original_filesize > 0) {
-      printf("Compression ration: %.2f%c\n",
+      printf("Compression ratio: %.2f%c\n",
              100 * (1 - (float)concluding_filesize / (float)original_filesize),
              PERCENT);
     } else {
