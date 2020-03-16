@@ -1,8 +1,8 @@
 # Running the program:
-
+```
     $make encode
     $./encode -v -i file_name -o file_name
-
+```
 - You can run -v to get the statistics of the program after it finishes running. This includes how large the file is before and after compression. It also includes the percent difference between the two.
 - You can run -i to change the file to compress. By default it reads from STDIN.
 - You can run -o to change the file to write to. By default it reads from STDOUT.
