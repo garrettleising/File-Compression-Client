@@ -1,5 +1,9 @@
 # Running the program:
 ```
+    $cd src
+```
+- First access the src directory
+```
     $make encode
     $./encode -v -i file_name -o file_name
 ```
