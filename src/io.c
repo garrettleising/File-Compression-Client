@@ -39,6 +39,10 @@ int32_t in_pair_bit_index = STARTING_POINT;
 int32_t in_pair_buffer_length = INITIAL;
 uint8_t in_pair_buffer[BUFFER_LENGTH];
 
+//==============================
+// Function descriptions in io.h
+//==============================
+
 void read_header(int infile, FileHeader *header) {
   int32_t error = read(infile, header, sizeof(FileHeader));
   if (error < 0) {
