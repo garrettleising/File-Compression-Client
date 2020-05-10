@@ -39,7 +39,6 @@ int32_t in_pair_bit_index = STARTING_POINT;
 int32_t in_pair_buffer_length = INITIAL;
 uint8_t in_pair_buffer[BUFFER_LENGTH];
 
-// works fine
 void read_header(int infile, FileHeader *header) {
   int32_t error = read(infile, header, sizeof(FileHeader));
   if (error < 0) {
@@ -51,7 +50,6 @@ void read_header(int infile, FileHeader *header) {
   }
 }
 
-// works fine
 void write_header(int outfile, FileHeader *header) {
   if (is_big()) {
     header->magic = swap32(header->magic);
@@ -63,7 +61,6 @@ void write_header(int outfile, FileHeader *header) {
   }
 }
 
-// Works perfectly
 bool read_sym(int infile, uint8_t *sym) {
   if (in_character_index == -1 ||
       in_character_index >= in_character_buffer_length - 1) {
@@ -79,7 +76,6 @@ bool read_sym(int infile, uint8_t *sym) {
   return true;
 }
 
-// not working as intended
 void buffer_pair(int outfile, uint16_t code, uint8_t sym, uint8_t bitlen) {
   uint8_t bitmask = MASK;
   uint16_t holder_code = 0;
@@ -148,7 +144,6 @@ void buffer_pair(int outfile, uint16_t code, uint8_t sym, uint8_t bitlen) {
   }
 }
 
-// works fine
 void flush_pairs(int outfile) {
   if (out_pair_byte_index < BUFFER_LENGTH) {
     int32_t error = write(outfile, out_pair_buffer, out_pair_byte_index);
@@ -159,7 +154,6 @@ void flush_pairs(int outfile) {
   }
 }
 
-// works fine
 bool read_pair(int infile, uint16_t *code, uint8_t *sym, uint8_t bitlen) {
   if (in_pair_buffer_length == -1) {
     in_pair_buffer_length = read(infile, in_pair_buffer, BUFFER_LENGTH);
@@ -217,7 +211,6 @@ bool read_pair(int infile, uint16_t *code, uint8_t *sym, uint8_t bitlen) {
   return true;
 }
 
-// works fine
 void buffer_word(int outfile, Word *w) {
   int error;
   if (w != NULL) {
@@ -237,7 +230,6 @@ void buffer_word(int outfile, Word *w) {
   }
 }
 
-// works fine
 void flush_words(int outfile) {
   if (out_character_index < out_character_buffer_length) {
     int32_t error = write(outfile, out_character_buffer, out_character_index);
