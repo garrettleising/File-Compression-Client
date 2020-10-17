@@ -1,4 +1,4 @@
-### Prerequisites:
+## Prerequisites:
 #### <a href="https://clang.llvm.org/" target="_blank">clang</a> is required to use Makefile
 
 # Running the program:
