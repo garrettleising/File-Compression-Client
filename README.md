@@ -1,3 +1,6 @@
+# Requirements
+## <a href="https://clang.llvm.org/">Clang</a>
+
 # Running the program:
 ```
     $cd src
