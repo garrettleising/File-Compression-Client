@@ -4,19 +4,19 @@
 
 # Running the program:
 ```
-    $cd src
+    $ cd src
 ```
 - First access the src directory
 ```
-    $make encode
-    $./encode -v -i file_name -o file_name
+    $ make encode
+    $ ./encode -v -i file_name -o file_name
 ```
 - You can run -v to get the statistics of the program after it finishes running. This includes how large the file is before and after compression. It also includes the percent difference between the two. (Still working on)
 - You can run -i to change the file to compress. By default it reads from STDIN.
 - You can run -o to change the file to write to. By default it reads from STDOUT.
 ```
-    $make decode
-    $./decode -v -i file_name -o file_name
+    $ make decode
+    $ ./decode -v -i file_name -o file_name
 ```
 - You can run -v to get the statistics of the program after it finishes running. This includes how large the file is before and after decompression. It also includes the percent difference between the two.
 - You can run -i to change the file to decompress. It must be a file that was compressed originally. By default it reads from STDIN.
