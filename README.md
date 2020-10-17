@@ -1,6 +1,6 @@
 # Requirements:
 
-## <a href="https://clang.llvm.org/" target="_blank">clang</a>
+#### <a href="https://clang.llvm.org/" target="_blank">clang</a>
 
 # Running the program:
 ```
